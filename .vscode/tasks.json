@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"type": "cppbuild",
+		"label": "Build with GCC",
+		"command": "/opt/homebrew/bin/g++-14",  // Adjust path if necessary
+		"args": [
+		  "-g",
+		  "-std=c++20",
+		  "${file}",
+		  "-o",
+		  "${fileDirname}/${fileBasenameNoExtension}"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": ["$gcc"],
+		"detail": "Task to compile C++ on macOS with Homebrew GCC"
+	  }
+	]
+  }
+  

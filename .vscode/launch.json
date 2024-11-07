@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug with CodeLLDB",
+      "type": "lldb",            // Use "lldb" to match the CodeLLDB extension
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}", // Path to the compiled executable
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "preLaunchTask": "Build with GCC"
+    }
+  ]
+}

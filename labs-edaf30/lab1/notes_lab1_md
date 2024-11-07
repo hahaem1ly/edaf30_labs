@@ -1,0 +1,31 @@
+- GCC - GNU compiler collection, compilers for many languages
+- preprocessor (cpp) - take a C++ source file -> handle preprocessor directives like #include, #define
+
+- compiler - actual compiler that translates input file into assembly
+- assembler - translates the assemblt code into machien code --> store in the object file
+- linker - collects object files into executable file
+
+- fil extension: .cpp or .cc
+- source file has definitions
+- declarations are collected in header files with extension .h -> to distinguish frm c -> .hpp or .hh
+- programs often have a lot of files the Editor class often editor.h
+  #ifndef EDITOR_H
+  #define EDITOR_H
+
+#include <string>
+
+class Editor {
+public:
+Editor(const std::string& t) : text(t) {}
+size_type find_left_par(size_type pos) const;
+
+private:
+std::string text;
+};
+
+#endif
+
+- include guards prevent header gile form being included in multiple times in a single comilation --> can cause errors
+- check if unique identifier like EDITOR_H has been defined
+  if not defined -> cbecomed defined -> add file content in included
+  if defined -> file is skipped
